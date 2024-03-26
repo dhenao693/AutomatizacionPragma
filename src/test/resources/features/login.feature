@@ -4,11 +4,11 @@
 
     Scenario Outline: Login successfull
       Given "Daniel" is on Demoblaze page
-#      When he login in app
-#        | name   | lastName   | personType   | email   | phone   | address   | gender   | birthdate   | documentType   | documentNumber   | city   | preferredTheater   | password   |
-#        | <name> | <lastName> | <personType> | <email> | <phone> | <address> | <gender> | <birthdate> | <documentType> | <documentNumber> | <city> | <preferredTheater> | <password> |
-#      Then see the correct email
+      When login in app
+        | username   | password   |
+        | <username> | <password> |
+      Then see the correct username
 
       Examples:
-        | name    | lastName | personType | email                    | phone      | address | gender    | birthdate  | documentType         | documentNumber | city   | preferredTheater | password  |
-        | usuario | login    | Natural    | usuariologin@yopmail.com | 3189876543 | prueba  | Masculino | 16/12/1994 | Cédula de Ciudadanía | 987654321      | Bogota | Lab v5 Floresta  | Prueba123 |
+        | username           | password  |
+        | dhenao@yopmail.com | 123456789 |

@@ -24,6 +24,7 @@ ext{
     serenityCucumberVersion = '3.2.5'
     lombokVersion = '1.18.30'
 }
+
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
