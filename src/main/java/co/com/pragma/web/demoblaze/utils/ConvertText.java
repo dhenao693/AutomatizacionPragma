@@ -3,8 +3,6 @@ package co.com.pragma.web.demoblaze.utils;
 import co.com.pragma.web.demoblaze.models.User;
 import net.serenitybdd.screenplay.Actor;
 
-import javax.swing.*;
-
 import static co.com.pragma.web.demoblaze.utils.Constants.USER_IN_MEMORY;
 import static java.lang.String.format;
 

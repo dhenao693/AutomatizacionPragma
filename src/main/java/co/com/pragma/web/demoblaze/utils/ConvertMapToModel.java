@@ -1,7 +1,6 @@
 package co.com.pragma.web.demoblaze.utils;
 
 
-
 import co.com.pragma.web.demoblaze.models.User;
 import co.com.pragma.web.demoblaze.models.UserInfo;
 

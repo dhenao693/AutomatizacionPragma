@@ -9,10 +9,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class AddToCarSuccessful implements Question<String> {
+public class SeeAlertText implements Question<String> {
 
-    public static  AddToCarSuccessful ok(){
-        return new AddToCarSuccessful();
+    public static SeeAlertText inScreen(){
+        return new SeeAlertText();
     }
     @Override
     public String answeredBy(Actor actor) {

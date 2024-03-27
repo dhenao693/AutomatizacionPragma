@@ -1,9 +1,6 @@
 package co.com.pragma.web.demoblaze.interactions.buy;
 
-import co.com.pragma.web.demoblaze.models.User;
 import co.com.pragma.web.demoblaze.models.UserInfo;
-import co.com.pragma.web.demoblaze.userinterfaces.buy.UserInfoFormPage;
-import co.com.pragma.web.demoblaze.utils.ConvertMapToModel;
 import lombok.RequiredArgsConstructor;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
@@ -34,15 +31,16 @@ public class FillUserForm implements Interaction {
     private boolean fillMonth = true;
     private boolean fillYear = true;
 
-    public static  FillUserForm toPay(List<Map<String, String>> userInfo){
+    public static FillUserForm toPay(List<Map<String, String>> userInfo) {
         UserInfo userInfoModel = convertMapToUserInfo(userInfo.get(0));
-        return Tasks.instrumented(FillUserForm.class,userInfoModel);
+        return Tasks.instrumented(FillUserForm.class, userInfoModel);
     }
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Check.whether(fillName)
-                .andIfSo(Enter.theValue(userInfo.getName()).into(LBL_NAME_MODAL))
+                        .andIfSo(Enter.theValue(userInfo.getName()).into(LBL_NAME_MODAL))
         );
 
         actor.attemptsTo(
@@ -73,32 +71,32 @@ public class FillUserForm implements Interaction {
         actor.attemptsTo(Click.on(BTN_PURCHASE));
     }
 
-    public FillUserForm withoutName(){
+    public FillUserForm withoutName() {
         this.fillName = false;
         return this;
     }
 
-    public FillUserForm withoutCountry(){
+    public FillUserForm withoutCountry() {
         this.fillCountry = false;
         return this;
     }
 
-    public FillUserForm withoutCity(){
+    public FillUserForm withoutCity() {
         this.fillCity = false;
         return this;
     }
 
-    public FillUserForm withoutCreditCard(){
+    public FillUserForm withoutCreditCard() {
         this.fillCreditCard = false;
         return this;
     }
 
-    public FillUserForm withoutMonth(){
+    public FillUserForm withoutMonth() {
         this.fillMonth = false;
         return this;
     }
 
-    public FillUserForm withoutYear(){
+    public FillUserForm withoutYear() {
         this.fillYear = false;
         return this;
     }
