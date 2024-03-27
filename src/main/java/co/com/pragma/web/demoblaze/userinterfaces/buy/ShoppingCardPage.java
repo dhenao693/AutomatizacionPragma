@@ -1,4 +1,4 @@
-package co.com.pragma.web.demoblaze.userinterfaces;
+package co.com.pragma.web.demoblaze.userinterfaces.buy;
 
 import lombok.NoArgsConstructor;
 import net.serenitybdd.screenplay.targets.Target;
