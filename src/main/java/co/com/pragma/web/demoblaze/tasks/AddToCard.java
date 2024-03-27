@@ -1,6 +1,6 @@
 package co.com.pragma.web.demoblaze.tasks;
 
-import co.com.pragma.web.demoblaze.questions.AddToCarSuccessful;
+import co.com.pragma.web.demoblaze.questions.SeeAlertText;
 import lombok.AllArgsConstructor;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -23,11 +23,11 @@ public class AddToCard implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.remember(PRODUCT_IN_MEMORY,BTN_FIRST_PRODUCT.resolveFor(actor).getText());
+        actor.remember(PRODUCT_IN_MEMORY, BTN_FIRST_PRODUCT.resolveFor(actor).getText());
         actor.attemptsTo(
                 Click.on(BTN_FIRST_PRODUCT),
                 Click.on(BTN_ADD_TO_CARD)
         );
-        actor.should(seeThat(AddToCarSuccessful.ok(), equalTo(alertMessage)));
+        actor.should(seeThat(SeeAlertText.inScreen(), equalTo(alertMessage)));
     }
 }

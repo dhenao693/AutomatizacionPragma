@@ -1,7 +1,7 @@
   #language: en
   Feature: Login
 
-
+    @login @userNotLogged @happyPath
     Scenario Outline: Login successfull
       Given "Daniel" is on Demoblaze page
       When login in app
