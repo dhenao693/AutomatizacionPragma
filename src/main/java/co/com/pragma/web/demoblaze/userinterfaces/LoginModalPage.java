@@ -1,10 +1,12 @@
 package co.com.pragma.web.demoblaze.userinterfaces;
 
+import lombok.NoArgsConstructor;
 import net.serenitybdd.screenplay.targets.Target;
 
 import static org.openqa.selenium.By.id;
 import static org.openqa.selenium.By.xpath;
 
+@NoArgsConstructor
 public class LoginModalPage {
     public static final Target LBL_USER = Target.the("")
             .located(id("loginusername"));
