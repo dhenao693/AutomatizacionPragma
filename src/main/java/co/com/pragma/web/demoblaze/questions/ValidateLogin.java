@@ -6,7 +6,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
 
-import static co.com.pragma.web.demoblaze.userinterfaces.Demoblaze.LBL_NAME_USER;
+import static co.com.pragma.web.demoblaze.userinterfaces.DemoblazeHomePage.LBL_NAME_USER;
 
 @NoArgsConstructor
 public class ValidateLogin implements Question<String> {

@@ -5,7 +5,7 @@ import net.serenitybdd.screenplay.targets.Target;
 import static org.openqa.selenium.By.id;
 import static org.openqa.selenium.By.xpath;
 
-public class LoginModal {
+public class LoginModalPage {
     public static final Target LBL_USER = Target.the("")
             .located(id("loginusername"));
     public static final Target LBL_PASSSWORD = Target.the("")

@@ -20,7 +20,7 @@ public class Hook {
     }
 
     @Given("{string} is on Demoblaze page")
-    public void danielIsOnDemoblazeWeb(String actorName) {
+    public void isOnDemoblazeWeb(String actorName) {
         theActorCalled(actorName).wasAbleTo(Start.browser());
     }
 }

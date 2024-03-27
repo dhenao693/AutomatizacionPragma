@@ -11,8 +11,10 @@ import net.serenitybdd.screenplay.actions.Enter;
 import java.util.List;
 import java.util.Map;
 
-import static co.com.pragma.web.demoblaze.userinterfaces.Demoblaze.BTN_LOG_IN;
-import static co.com.pragma.web.demoblaze.userinterfaces.LoginModal.*;
+import static co.com.pragma.web.demoblaze.userinterfaces.DemoblazeHomePage.BTN_LOG_IN;
+import static co.com.pragma.web.demoblaze.userinterfaces.LoginModalPage.BTN_START_LOGIN;
+import static co.com.pragma.web.demoblaze.userinterfaces.LoginModalPage.LBL_PASSSWORD;
+import static co.com.pragma.web.demoblaze.userinterfaces.LoginModalPage.LBL_USER;
 import static co.com.pragma.web.demoblaze.utils.Constants.USER_IN_MEMORY;
 import static co.com.pragma.web.demoblaze.utils.ConvertMapToModel.convertMapToUser;
 
