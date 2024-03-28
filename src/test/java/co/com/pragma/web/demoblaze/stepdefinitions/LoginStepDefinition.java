@@ -24,4 +24,20 @@ public class LoginStepDefinition {
         theActorInTheSpotlight().should(seeThat(ValidateLogin.inScreen(),
                 equalTo(convertUsernameLogged(theActorInTheSpotlight()))));
     }
+
+
+    @When("login in app without username")
+    public void loginInAppWithoutUsername(List<Map<String, String>> users) {
+        theActorInTheSpotlight().attemptsTo(Login.withTheUser(users).withoutUser());
+    }
+
+    @When("login in app without password")
+    public void loginInAppWithoutPassword(List<Map<String, String>> users) {
+        theActorInTheSpotlight().attemptsTo(Login.withTheUser(users).withoutPassword());
+    }
+
+    @When("login in app without all")
+    public void loginInAppWithoutAll(List<Map<String, String>> users) {
+        theActorInTheSpotlight().attemptsTo(Login.withTheUser(users).withoutUser().withoutPassword());
+    }
 }

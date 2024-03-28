@@ -1,6 +1,8 @@
 package co.com.pragma.web.demoblaze.interactions.buy;
 
+import co.com.pragma.web.demoblaze.exceptions.LabelDoesNotExistExcecption;
 import lombok.RequiredArgsConstructor;
+import lombok.SneakyThrows;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
@@ -18,6 +20,7 @@ public class FillUserFormWithout implements Task {
 
     }
 
+    @SneakyThrows
     @Override
     public <T extends Actor> void performAs(T actor) {
         switch (label.toUpperCase()) {
@@ -40,7 +43,7 @@ public class FillUserFormWithout implements Task {
                 actor.attemptsTo(FillUserForm.toPay(userInfo).withoutYear());
                 break;
             default:
-                throw new RuntimeException("this label doesn't exist");
+                throw new LabelDoesNotExistExcecption("this label doesn't exist");
         }
 
     }
