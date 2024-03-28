@@ -2,6 +2,7 @@ package co.com.pragma.web.demoblaze.stepdefinitions;
 
 import co.com.pragma.web.demoblaze.questions.ValidateLogin;
 import co.com.pragma.web.demoblaze.tasks.Login;
+import co.com.pragma.web.demoblaze.tasks.LoginWithout;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -25,15 +26,9 @@ public class LoginStepDefinition {
                 equalTo(convertUsernameLogged(theActorInTheSpotlight()))));
     }
 
-
-    @When("login in app without username")
-    public void loginInAppWithoutUsername(List<Map<String, String>> users) {
-        theActorInTheSpotlight().attemptsTo(Login.withTheUser(users).withoutUser());
-    }
-
-    @When("login in app without password")
-    public void loginInAppWithoutPassword(List<Map<String, String>> users) {
-        theActorInTheSpotlight().attemptsTo(Login.withTheUser(users).withoutPassword());
+    @When("login in app without {string}")
+    public void loginInAppWithoutUsername(String field, List<Map<String, String>> users) {
+        theActorInTheSpotlight().attemptsTo(LoginWithout.theField(users,field));
     }
 
     @When("login in app without all")
